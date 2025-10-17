@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-10-17T14:59:27.818163" rpa="false" schemaversion="5">
+<suite id="s1" name="11 Robot Framework" source="C:\Users\student-wroclaw\Desktop\Altkom_15_15_10_2025\src\11_robot_framework.robot">
+<test id="s1-t1" name="Test 1" line="16">
+<kw name="kilord kamila">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Siema</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-17T14:59:28.114404" elapsed="0.000355"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-17T14:59:28.115301" level="INFO">Opening browser 'gc' to base url 'https://pl.wikipedia.org/'.</msg>
+<arg>https://pl.wikipedia.org/</arg>
+<arg>gc</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-17T14:59:28.115043" elapsed="1.803671"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-17T14:59:29.918995" elapsed="0.070049"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-17T14:59:29.989750" level="INFO">Clicking element 'pt-login-2'.</msg>
+<arg>pt-login-2</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-17T14:59:29.989297" elapsed="1.583352"/>
+</kw>
+<status status="PASS" start="2025-10-17T14:59:28.113493" elapsed="3.459357"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-17T14:59:31.573567" level="INFO">Typing text 'Kamil' into text field 'wpName1'.</msg>
+<arg>wpName1</arg>
+<arg>Kamil</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-17T14:59:31.573265" elapsed="0.110514"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-10-17T14:59:31.684754" level="INFO">Typing password into text field 'wpPassword'.</msg>
+<msg time="2025-10-17T14:59:31.723825" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>wpPassword</arg>
+<arg>${haslo}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-17T14:59:31.684344" elapsed="0.095808"/>
+</kw>
+<kw name="Checkbox Should Not Be Selected" owner="SeleniumLibrary">
+<msg time="2025-10-17T14:59:31.780865" level="INFO">Verifying checkbox 'wpRemember' is not selected.</msg>
+<arg>wpRemember</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<status status="PASS" start="2025-10-17T14:59:31.780610" elapsed="0.071353"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-17T14:59:31.852670" level="INFO">Clicking button 'wploginattempt'.</msg>
+<arg>wploginattempt</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-17T14:59:31.852399" elapsed="0.093995"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>wploginattempt</arg>
+<arg>5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-17T14:59:31.946853" elapsed="0.945742"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-10-17T14:59:32.919986" level="INFO">${text} = Podany login lub hasło są nieprawidłowe. Spróbuj jeszcze raz.</msg>
+<var>${text}</var>
+<arg>xpath:/html/body/div[2]/div/div[3]/main/div[3]/div[3]/div[3]/div/form/div[1]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-17T14:59:32.893052" elapsed="0.027004"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-10-17T14:59:32.920918" level="FAIL">Podany login lub hasło są nieprawidłowe. Spróbuj jeszcze raz. != Podany login lub hasło są nieprawidłowe. Spróbuj jeszcze raz</msg>
+<arg>${text}</arg>
+<arg>${error message}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="FAIL" start="2025-10-17T14:59:32.920502" elapsed="0.000627">Podany login lub hasło są nieprawidłowe. Spróbuj jeszcze raz. != Podany login lub hasło są nieprawidłowe. Spróbuj jeszcze raz</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-10-17T14:59:32.921458" elapsed="0.000044"/>
+</kw>
+<status status="FAIL" start="2025-10-17T14:59:28.112565" elapsed="4.809509">Podany login lub hasło są nieprawidłowe. Spróbuj jeszcze raz. != Podany login lub hasło są nieprawidłowe. Spróbuj jeszcze raz</status>
+</test>
+<status status="FAIL" start="2025-10-17T14:59:27.820005" elapsed="5.103331"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="11 Robot Framework" id="s1" pass="0" fail="1" skip="0">11 Robot Framework</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
