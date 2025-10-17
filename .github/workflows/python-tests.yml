@@ -31,3 +31,7 @@ jobs:
     - name: Run tests with pytest
       run: |
         pytest
+
+    - name: Run tests with specific options
+      run: |
+        pytest -v --tb=short --maxfail=5 tests/
