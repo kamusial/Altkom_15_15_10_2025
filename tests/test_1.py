@@ -1,7 +1,7 @@
-from POM import LoginPage
+from src.POM import LoginPage
 from selenium import webdriver
 from time import sleep
-from stary_kod import make_screenshot
+from src.stary_kod import make_screenshot
 import pytest
 
 test_data = [
